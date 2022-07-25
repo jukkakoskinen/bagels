@@ -90,7 +90,7 @@
 				{/each}
 			</div>
 		{/if}
-		<dl id="help" class="mb-4">
+		<dl id="help" class="mb-6">
 			<dt class="inline-flex">
 				<span class="text-green-400 w-6">▒</span>
 				<span>Pico</span>
@@ -107,5 +107,8 @@
 			</dt>
 			<dd class="ml-6 text-neutral-400">No digit is correct.</dd>
 		</dl>
+		<div class="text-neutral-400 text-sm md:fixed md:bottom-4 md:right-4">
+			Made by <a class="underline" href="https://www.jukkakoskinen.fi">Jukka Koskinen</a>
+		</div>
 	</div>
 </div>
