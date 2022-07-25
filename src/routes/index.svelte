@@ -25,49 +25,49 @@
 </svelte:head>
 
 <div class="bg-black font-mono h-screen text-white">
-	<div class="flex flex-col max-h-screen max-w-xl mx-auto p-4 md:p-12">
+	<div class="mx-auto max-w-xl p-4 md:p-12">
 		<h1 class="mb-2 text-xl">Bagels</h1>
 		<p class="mb-6 text-stone-400">
 			I am thinking of a {game.secret.length}-digit number with no repeated digits. Try to guess it!
 		</p>
 		{#if game.won}
 			<a
-				class="bg-transparent border border-green-400 font-bold mb-4 px-2 py-1 text-center text-green-400 w-full"
+				class="bg-transparent block border border-green-400 font-bold mb-4 px-2 py-1 text-center text-green-400 w-full"
 				href="/"
 				sveltekit:reload>You win! Try again?</a
 			>
 		{:else if game.lost}
 			<a
-				class="bg-transparent border border-red-400 font-bold mb-4 px-2 py-1 text-center text-red-400 w-full"
+				class="bg-transparent block border border-red-400 font-bold mb-4 px-2 py-1 text-center text-red-400 w-full"
 				href="/"
 				sveltekit:reload>You lose! Try again?</a
 			>
 		{:else}
 			<div class="mb-6">
 				<form
-					class="flex mb-2 space-x-2"
+					class="flex space-x-2"
 					autocomplete="off"
 					on:submit|preventDefault={handleGuessSubmit}
 				>
 					<input
-						class="bg-transparent border border-stone-400 flex-1 px-2 py-1 placeholder:text-neutral-400"
+						class="bg-transparent border border-stone-400 px-2 py-1 w-full placeholder:text-neutral-400"
 						name="guess"
 						type="text"
 						inputmode="numeric"
 						placeholder="Enter your guess"
 						bind:value={guess}
 					/>
-					<button class="bg-transparent border border-stone-400 px-2 py-1"
+					<button class="bg-transparent border border-stone-400 px-2 py-1 whitespace-nowrap"
 						>Attempt ({game.guessesLeft})</button
 					>
 				</form>
 				{#if gameError}
-					<div class="text-red-400">{gameError}</div>
+					<div class="mt-2 text-red-400">{gameError}</div>
 				{/if}
 			</div>
 		{/if}
 		{#if game.guesses.length}
-			<div class="border border-stone-400 divide-y divide-stone-600 mb-6 overflow-auto">
+			<div class="border border-stone-400 divide-y divide-stone-600 max-h-52 mb-6 overflow-auto">
 				{#each game.guesses as guess, idx}
 					<div class="flex space-x-2 p-2" class:opacity-50={idx > 0}>
 						<div class="flex space-x-0.5 text-green-400">
