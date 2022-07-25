@@ -24,7 +24,7 @@
 	<title>Bagels</title>
 </svelte:head>
 
-<div class="bg-black font-mono h-screen text-white">
+<div class="bg-black font-mono min-h-screen text-white">
 	<div class="mx-auto max-w-xl p-4 md:p-12">
 		<h1 class="mb-2 text-xl">Bagels</h1>
 		<p class="mb-6 text-stone-400">
