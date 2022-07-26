@@ -27,7 +27,7 @@
 <div class="bg-black font-mono min-h-screen text-white">
 	<div class="mx-auto max-w-xl p-4 md:p-12">
 		<h1 class="mb-2 text-xl">Bagels</h1>
-		<p class="mb-6 text-stone-400">
+		<p class="mb-6 text-neutral-400">
 			I am thinking of a {game.secret.length}-digit number with no repeated digits. Try to guess it!
 		</p>
 		{#if game.won}
@@ -50,14 +50,14 @@
 					on:submit|preventDefault={handleGuessSubmit}
 				>
 					<input
-						class="bg-transparent border border-stone-400 px-2 py-1 w-full placeholder:text-neutral-400"
+						class="bg-transparent border border-neutral-400 px-2 py-1 w-full placeholder:text-neutral-400"
 						name="guess"
 						type="text"
 						inputmode="numeric"
 						placeholder="Enter your guess"
 						bind:value={guess}
 					/>
-					<button class="bg-transparent border border-stone-400 px-2 py-1 whitespace-nowrap"
+					<button class="bg-transparent border border-neutral-400 px-2 py-1 whitespace-nowrap"
 						>Attempt ({game.guessesLeft})</button
 					>
 				</form>
@@ -67,7 +67,7 @@
 			</div>
 		{/if}
 		{#if game.guesses.length}
-			<div class="border border-stone-400 divide-y divide-stone-600 max-h-52 mb-6 overflow-auto">
+			<div class="border border-neutral-400 divide-y divide-neutral-400 max-h-52 mb-6 overflow-auto">
 				{#each game.guesses as guess, idx}
 					<div class="flex space-x-2 p-2" class:opacity-50={idx > 0}>
 						<div class="flex space-x-0.5 text-green-400">
