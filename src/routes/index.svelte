@@ -108,7 +108,7 @@
 			<dd class="ml-6 text-neutral-400">No digit is correct.</dd>
 		</dl>
 		<div class="text-neutral-400 text-sm md:fixed md:bottom-4 md:right-4">
-			Made by <a class="underline" href="https://www.jukkakoskinen.fi">Jukka Koskinen</a>
+			Made by <a class="text-white underline" href="https://www.jukkakoskinen.fi">Jukka Koskinen</a>
 		</div>
 	</div>
 </div>
